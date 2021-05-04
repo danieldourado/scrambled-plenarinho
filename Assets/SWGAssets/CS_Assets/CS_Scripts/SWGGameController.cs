@@ -1001,7 +1001,7 @@ namespace ScrambledWordGame
                 gameOverCanvas.gameObject.SetActive(true);
 
                 //Write the score text, if it exists
-                if (gameOverCanvas.Find("ScoreTexts/TextScore")) gameOverCanvas.Find("ScoreTexts/TextScore").GetComponent<Text>().text = "SCORE " + score.ToString();
+                if (gameOverCanvas.Find("ScoreTexts/TextScore")) gameOverCanvas.Find("ScoreTexts/TextScore").GetComponent<Text>().text = "PONTOS " + score.ToString();
 
                 //Check if we got a high score
                 if (score > highScore)
@@ -1013,7 +1013,7 @@ namespace ScrambledWordGame
                 }
 
                 //Write the high sscore text
-                gameOverCanvas.Find("ScoreTexts/TextHighScore").GetComponent<Text>().text = "HIGH SCORE " + highScore.ToString();
+                gameOverCanvas.Find("ScoreTexts/TextHighScore").GetComponent<Text>().text = "PONTOS RECORDE " + highScore.ToString();
 
                 //If there is a source and a sound, play it from the source
                 if (soundSource && soundGameOver) soundSource.GetComponent<AudioSource>().PlayOneShot(soundGameOver);
@@ -1039,7 +1039,7 @@ namespace ScrambledWordGame
                 if (victoryCanvas.Find("ScoreTexts/TextScore") && victoryCanvas.Find("ScoreTexts/TextHighScore"))
                 {
                     //Write the score text, if it exists
-                    victoryCanvas.Find("ScoreTexts/TextScore").GetComponent<Text>().text = "SCORE " + score.ToString();
+                    victoryCanvas.Find("ScoreTexts/TextScore").GetComponent<Text>().text = "PONTOS " + score.ToString();
 
                     //Check if we got a high score
                     if (score > highScore)
@@ -1051,7 +1051,7 @@ namespace ScrambledWordGame
                     }
 
                     //Write the high sscore text
-                    victoryCanvas.Find("ScoreTexts/TextHighScore").GetComponent<Text>().text = "HIGH SCORE " + highScore.ToString();
+                    victoryCanvas.Find("ScoreTexts/TextHighScore").GetComponent<Text>().text = "PONTOS RECORDE " + highScore.ToString();
                 }
 
                 //If there is a source and a sound, play it from the source
